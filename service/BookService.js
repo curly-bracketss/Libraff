@@ -1,5 +1,5 @@
 
-import AxiosInstance from './AxiosInstance';
+import {AxiosInstance} from './AxiosInstance';
 
 export async function getAllBooks() {
     try {

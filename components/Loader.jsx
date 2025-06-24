@@ -1,9 +1,6 @@
-import Navbar from "./Navbar"
-import Footer from "./Footer"
 const Loader = () => {
     return (
         <div>
-            {/* <Navbar/> */}
             <div>
             <div class="text-center max-w-[1320px] mx-auto flex justify-center items-center h-[100vh]">
                 <div role="status">
@@ -15,7 +12,6 @@ const Loader = () => {
                 </div>
             </div>
             </div>
-            {/* <Footer/> */}
         </div>
     )
 }

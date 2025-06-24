@@ -9,30 +9,29 @@ import WishListLayout from '../Layout/WishListLayout'
 import WishList from '../components/WishList'
 import AdminLayout from '../Layout/AdminLayout'
 import AdminPanel from '../components/AdminPanel'
+import LoginDash from '../components/LoginDash'
+import RegisterDash from '../components/RegisterDash'
 
 
 function App() {
 
   return (
     <Routes>
-      
+
       <Route path='/' element={<MainLayout />}>
-      
         <Route index element={<Home />} />
         <Route path=':sec' element={<Section />} />
         <Route path=':sec/:cat' element={<Section />} />
         <Route path=':sec/:cat/:id' element={<Section />} />
-   <Route path="/book/:idofb" element={<Details />} />
-
-
+        <Route path="/book/:idofb" element={<Details />} />
       </Route>
-
+      <Route path='/auth/login' element={<LoginDash />} />
+      <Route path='/auth/register' element={<RegisterDash />} />
       <Route path='/wishlist-view' element={<WishListLayout />}>
         <Route index element={<WishList />} />
       </Route>
       <Route path='/admin-panel' element={<AdminLayout />}>
         <Route index element={<AdminPanel />} />
-
       </Route>
     </Routes>
   )

@@ -6,6 +6,7 @@ import Search from './Search';
 import { FaRegHeart } from "react-icons/fa6";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { ChevronDown } from "lucide-react";
+import Account from './Account';
 const Navbar = () => {
   const productCount = (JSON.parse(localStorage.getItem('products')) || []).length;
   const favCount = (JSON.parse(localStorage.getItem('favlist')) || []).length;
@@ -22,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className='hidden md:flex md:flex-col md:items-center gap-10 max-w-[1320px] relative mx-auto py-10 px-4 sm:px-6 lg:px-8'>
-      <div className=' md:flex md:flex-row items-center md:justify-between gap-6 sm:gap-30 w-full'>
+      <div className=' md:flex md:flex-row md:items-center md:justify-between gap-6 sm:gap-30 w-full'>
         <Link to="/">
           <div className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px]">
             <img src={logo} alt="Logo" className="w-full h-auto object-contain" />
@@ -34,7 +35,7 @@ const Navbar = () => {
           <Search />
         </div>
 
-        <div className='flex gap-3 relative'>
+        <div className='flex gap-3 relative items-center'>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex items-center gap-1 px-3 py-2 text-sm text-gray-700 bg-white rounded focus:outline-none font-light"
@@ -61,7 +62,7 @@ const Navbar = () => {
               </span>
             </div>
           )}
-
+          <Account/>
           <div className='relative'>
             <Link to='/wishlist-view'><FaRegHeart className='font-extrabold text-[24px] sm:text-[28px]' /></Link>
             <p className='bg-[red] rounded-full absolute -top-1 -right-2 min-w-5 w-max h-5 text-sm leading-5 text-white border-2 border-white flex items-center justify-center'>{favCount}</p>
