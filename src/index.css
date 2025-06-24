@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-carousel .slick-dots {
+  bottom: 10px; 
+}
+
+.custom-carousel .slick-dots li {
+  width: 8px; 
+  height: 8px; 
+  border-radius: 50%;
+  background-color: #9facbfab;
+  margin: 0 02px;
+}
+
+.custom-carousel .slick-dots li.slick-active {
+  width: 25px; 
+  border-radius: 20px !important;
+  background-color: #9FACBF;
+
+}
+
